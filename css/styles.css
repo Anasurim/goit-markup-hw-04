@@ -8,6 +8,8 @@
   --accent-color-hover: #188ce8;
   --logo-color: #000000;
   --border-param: 1px solid #eeeeee;
+  --soc-links-bgc: #afb1b8;
+  --footer-bgc-soc: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -38,7 +40,6 @@ img {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px dashed red; */
 }
 
 /* nav styles */
@@ -125,18 +126,14 @@ img {
 
 .icon-envelope,
 .icon-smartphone {
-  fill: var(--primary-text-color);
   margin-right: 10px;
+  fill: currentColor;
 }
 .mail:focus,
 .mail:hover,
 .phone:focus,
 .phone:hover {
   color: var(--accent-color);
-}
-.icon-envelope:hover,
-.icon-smartphone:hover {
-  fill: var(--accent-color);
 }
 
 /* main styles */
@@ -258,7 +255,6 @@ img {
   list-style: none;
 
   display: flex;
-  /* justify-content: space-between; */
   gap: 30px;
   margin-top: 0;
   margin-bottom: 0;
@@ -293,7 +289,6 @@ img {
   list-style: none;
 
   display: flex;
-  /* justify-content: space-between; */
   gap: 30px;
   margin-top: 0;
   margin-bottom: 0;
@@ -340,13 +335,41 @@ img {
   color: var(--primary-text-color);
 
   margin-top: 0;
+  margin-bottom: 16px;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-left: 0;
   margin-bottom: 30px;
+}
+.social-links > .item {
+  flex-basis: 44px;
+}
+.social-links > .item a {
+  display: inline-flex;
+  padding: 12px 12px;
+  color: var(--soc-links-bgc);
+}
+.social-links > .item a:hover {
+  border-radius: 50%;
+  color: var(--nav-background-color);
+  background-color: var(--accent-color);
+}
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+  fill: currentColor;
 }
 /* footer styles */
 .footer {
   background-color: var(--dark-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
 }
 
 .footer .logo {
@@ -398,6 +421,37 @@ img {
   color: var(--accent-color);
 }
 
+.join-us {
+  max-width: 206px;
+  margin-left: 70px;
+  padding-top: 12px;
+}
+.join-us h2 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16px / 14px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--nav-background-color);
+
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.footer-soclinks {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer-soclinks a {
+  background-color: var(--footer-bgc-soc);
+  border-radius: 50%;
+}
+.footer-soclinks .icon-instagram,
+.footer-soclinks .icon-twitter,
+.footer-soclinks .icon-facebook,
+.footer-soclinks .icon-linkedin {
+  fill: var(--nav-background-color);
+}
 /* portfolio styles */
 .gallery-filter-list {
   list-style: none;
