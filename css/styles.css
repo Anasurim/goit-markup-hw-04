@@ -10,6 +10,7 @@
   --border-param: 1px solid #eeeeee;
   --soc-links-bgc: #afb1b8;
   --footer-bgc-soc: rgba(255, 255, 255, 0.1);
+  --customer-link-color: #afb1b8;
 }
 
 body {
@@ -40,6 +41,7 @@ img {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  /* outline: 1px solid red; */
 }
 
 /* nav styles */
@@ -90,6 +92,9 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.nav-list .list-link.current {
+  color: var(--accent-color);
 }
 
 .nav-list .list-link:focus,
@@ -345,9 +350,7 @@ img {
   padding-left: 0;
   margin-bottom: 30px;
 }
-.social-links > .item {
-  flex-basis: 44px;
-}
+
 .social-links > .item a {
   display: inline-flex;
   padding: 12px 12px;
@@ -364,14 +367,63 @@ img {
 .icon-linkedin {
   fill: currentColor;
 }
+
+/* customers styles */
+.customers {
+  color: var(--secondary-text-color);
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.customers h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.customers-list {
+  list-style: none;
+
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  gap: 30px;
+  justify-content: center;
+}
+.customers-list > .item a {
+  color: var(--customer-link-color);
+
+  display: inline-flex;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.customers-list > .item a:hover {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.icon-company1,
+.icon-company2,
+.icon-company3,
+.icon-company4,
+.icon-company5,
+.icon-company6 {
+  fill: currentColor;
+}
 /* footer styles */
 .footer {
   background-color: var(--dark-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-flex {
   display: flex;
 }
-
 .footer .logo {
   color: var(--nav-background-color);
 
@@ -487,6 +539,8 @@ img {
 .gallery-filter button:active {
   background-color: var(--accent-color);
   color: var(--nav-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .gallery-portfolio-list {
   list-style: none;
@@ -504,7 +558,14 @@ img {
   flex-basis: calc((100%-60px) / 3);
   max-width: 370px;
 }
-
+.gallery-portfolio-list > .item a {
+  display: inline-block;
+  text-decoration: none;
+}
+.gallery-portfolio-list > .item a:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-descr {
   border-bottom: var(--border-param);
   border-left: var(--border-param);
